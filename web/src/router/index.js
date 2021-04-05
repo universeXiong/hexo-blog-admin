@@ -116,6 +116,21 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/images',
+    component: Layout,
+    redirect: '/images/index',
+    name: 'ImagesManage',
+    meta: { title: 'imagesManage', icon: 'el-icon-picture-outline' },
+    children: [
+      {
+        path: 'list',
+        name: 'ImagesList',
+        component: () => import('@/views/images/index'),
+        meta: { title: 'imagesList', icon: 'el-icon-picture-outline' }
+      }
+    ]
+  },
+  {
     path: '/systemSettings',
     component: Layout,
     redirect: '/systemSettings/index',

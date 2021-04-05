@@ -17,7 +17,9 @@ export default {
     page404: '404',
     i18n: 'I18n',
     externalLink: 'External Link',
-    profile: 'Profile'
+    profile: 'Profile',
+    imagesManage: 'ImagesManage',
+    imagesList: 'ImagesList'
   },
   pickerOptions: {
     recentWeek: 'Recent Week',
