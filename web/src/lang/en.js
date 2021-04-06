@@ -163,6 +163,33 @@ export default {
       noCommentNeedCancelAudit: 'No comment need to cancel audit!'
     }
   },
+  imagesManage: {
+    imageList: {
+      batchOperate: 'OperateBatch',
+      deleteBatch: 'DeleteBatch',
+      searchUsername: 'Please enter the username',
+      searchEmail: 'Please enter the email',
+      searchCommentCount: 'Please enter the comment count',
+      table: {
+        filename: {
+          columnName: 'FileName',
+          width: '65'
+        },
+        preview: {
+          columnName: 'PreView',
+          width: '120'
+        }
+      },
+      message: {
+        operateSuccess: 'Operate Success!',
+        deleteConfirmMessage: 'The user\'s comment data will also be deleted, are you sure?',
+        deleteConfirmMessageTitle: 'Warning',
+        chooseDataDelete: 'Please choose date to delete!！',
+        cancel: 'Cancel',
+        confirm: 'Confirm'
+      }
+    }
+  },
   userManage: {
     userList: {
       batchOperate: 'OperateBatch',

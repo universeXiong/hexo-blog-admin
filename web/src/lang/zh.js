@@ -136,6 +136,14 @@ export default {
           cancelAudit: '取消审核',
           deleteComment: '删除',
           reply: '回复'
+        },
+        filename: {
+          columnName: '文件名',
+          width: '120'
+        },
+        preview: {
+          columnName: '预览',
+          width: '120'
         }
       }
     },
@@ -155,6 +163,33 @@ export default {
       chooseDataDelete: '请选择需要删除的数据！',
       noCommentNeedAudit: '没有需要审核通过的评论！',
       noCommentNeedCancelAudit: '没有需要取消审核的评论！'
+    }
+  },
+  imagesManage: {
+    imageList: {
+      batchOperate: '批量操作',
+      deleteBatch: '批量删除',
+      searchUsername: '请输入用户名',
+      searchEmail: '请输入邮件',
+      searchCommentCount: '请输入评论数',
+      table: {
+        filename: {
+          columnName: '文件名',
+          width: '65'
+        },
+        preview: {
+          columnName: '预览',
+          width: '120'
+        }
+      }
+    },
+    message: {
+      operateSuccess: '操作成功！',
+      deleteConfirmMessage: '该用户相关的评论数据也将一并删除，是否确认操作？',
+      deleteConfirmMessageTitle: '提示',
+      chooseDataDelete: '请选择需要删除的数据！',
+      cancel: '取消',
+      confirm: '确定'
     }
   },
   userManage: {
