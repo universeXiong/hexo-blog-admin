@@ -176,10 +176,11 @@ a:hover {
   width: 120px;
 }
 
-.copy-icon{
+.copy-icon {
   cursor: pointer;
 }
-.copy-icon :hover{
+
+.copy-icon :hover {
   color: #409EFF;
 }
 </style>
