@@ -165,12 +165,10 @@ export default {
   },
   imagesManage: {
     imageList: {
-      batchOperate: 'OperateBatch',
-      deleteBatch: 'DeleteBatch',
-      searchUsername: 'Please enter the username',
-      searchEmail: 'Please enter the email',
-      searchCommentCount: 'Please enter the comment count',
       table: {
+        number: {
+          columnName: 'No.'
+        },
         filename: {
           columnName: 'FileName',
           width: '65'
@@ -178,17 +176,24 @@ export default {
         preview: {
           columnName: 'PreView',
           width: '120'
+        },
+        url: {
+          columnName: 'url'
+        },
+        operate: {
+          columnName: 'operate'
         }
-      },
-      message: {
-        operateSuccess: 'Operate Success!',
-        deleteConfirmMessage: 'The user\'s comment data will also be deleted, are you sure?',
-        deleteConfirmMessageTitle: 'Warning',
-        chooseDataDelete: 'Please choose date to delete!！',
-        cancel: 'Cancel',
-        confirm: 'Confirm'
       }
+    },
+    message: {
+      operateSuccess: 'Operate Success!',
+      copySuccess: 'Copy Success！',
+      deleteConfirmMessage: 'Cloud storage files will also be deleted, are you sure?',
+      deleteConfirmMessageTitle: 'Warning',
+      cancel: 'Cancel',
+      confirm: 'Confirm'
     }
+
   },
   userManage: {
     userList: {
