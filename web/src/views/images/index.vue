@@ -113,6 +113,7 @@ export default {
       })
     },
     deleteImage(id) {
+      console.log(id)
       this.$confirm(this.$t('imagesManage.message.deleteConfirmMessage'), this.$t('imagesManage.message.deleteConfirmMessageTitle'), {
         confirmButtonText: this.$t('imagesManage.message.confirm'),
         cancelButtonText: this.$t('imagesManage.message.cancel'),
