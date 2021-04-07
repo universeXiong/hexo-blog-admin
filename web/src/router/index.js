@@ -120,13 +120,13 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/images/index',
     name: 'ImagesManage',
-    meta: { title: 'imagesManage', icon: 'el-icon-picture-outline' },
+    meta: { title: 'imagesManage', icon: 'image' },
     children: [
       {
         path: 'list',
         name: 'ImagesList',
         component: () => import('@/views/images/index'),
-        meta: { title: 'imagesList', icon: 'el-icon-picture-outline' }
+        meta: { title: 'imagesList', icon: 'image' }
       }
     ]
   },
