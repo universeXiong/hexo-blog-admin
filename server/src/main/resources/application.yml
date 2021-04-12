@@ -80,3 +80,8 @@ pagehelper:
   reasonable: true
   # 支持方法参数
   support-methods-arguments: true
+qiniu:
+  accessKey:
+  secretKey:
+  domainOfBucket:
+  bucket:

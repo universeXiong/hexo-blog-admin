@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.movefeng.hexoblogadmin.dao.FileInfoDao">
+  <resultMap id="BaseResultMap" type="com.movefeng.hexoblogadmin.model.FileInfo">
+    <!--@mbg.generated-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="business_type" jdbcType="INTEGER" property="businessType" />
+    <result column="business_id" jdbcType="BIGINT" property="businessId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="size" jdbcType="INTEGER" property="size" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="suffix" jdbcType="VARCHAR" property="suffix" />
+    <result column="upload_agent" jdbcType="VARCHAR" property="uploadAgent" />
+    <result column="upload_ip" jdbcType="VARCHAR" property="uploadIp" />
+    <result column="display_order" jdbcType="INTEGER" property="displayOrder" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="del" jdbcType="INTEGER" property="del" />
+    <result column="creator" jdbcType="BIGINT" property="creator" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="updater" jdbcType="BIGINT" property="updater" />
+    <result column="update_date" jdbcType="TIMESTAMP" property="updateDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, business_type, business_id, `name`, `size`, url, suffix, upload_agent, upload_ip,
+    display_order, note, del, creator, create_date, updater, update_date
+  </sql>
+  <insert id="insertBatch">
+    insert into file_info(id,
+    business_type,
+    business_id,
+    name,
+    size,
+    url,
+    suffix,
+    upload_agent,
+    upload_ip,
+    display_order,
+    note,
+    del,
+    creator,
+    create_date,
+    updater,
+    update_date)
+    values
+    <foreach collection="fileInfoCollection" item="item" separator=",">
+      (#{item.id,jdbcType=NUMERIC},
+      #{item.businessType,jdbcType=NUMERIC},
+      #{item.businessId,jdbcType=NUMERIC},
+      #{item.name,jdbcType=VARCHAR},
+      #{item.size,jdbcType=NUMERIC},
+      #{item.url,jdbcType=VARCHAR},
+      #{item.suffix,jdbcType=VARCHAR},
+      #{item.uploadAgent,jdbcType=VARCHAR},
+      #{item.uploadIp,jdbcType=VARCHAR},
+      #{item.displayOrder,jdbcType=NUMERIC},
+      #{item.note,jdbcType=VARCHAR},
+      #{item.del,jdbcType=NUMERIC},
+      #{item.creator,jdbcType=NUMERIC},
+      #{item.createDate,jdbcType=TIMESTAMP},
+      #{item.updater,jdbcType=NUMERIC},
+      #{item.updateDate,jdbcType=TIMESTAMP})
+    </foreach>
+  </insert>
+  <delete id="deleteAll">
+    delete from file_info
+  </delete>
+</mapper>
