@@ -185,11 +185,17 @@ export default {
         }
       }
     },
+    button: {
+      upload: 'upload',
+      refresh: 'refresh'
+    },
     message: {
       operateSuccess: 'Operate Success!',
       copySuccess: 'Copy Success！',
       deleteConfirmMessage: 'Cloud storage files will also be deleted, are you sure?',
+      refreshConfirmMessage: 'Do you want to synchronize cloud storage file information immediately? This may take a few minutes.',
       deleteConfirmMessageTitle: 'Warning',
+      refreshConfirmMessageTitle: 'Warning',
       cancel: 'Cancel',
       confirm: 'Confirm'
     }

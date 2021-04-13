@@ -1,8 +1,10 @@
 <template>
   <div class="app-container">
     <div class="search-container">
-      <el-button type="primary" size="small" icon="el-icon-upload" />
-      <el-button type="primary" size="small" icon="el-icon-sort" />
+      <el-button type="primary" size="small" icon="el-icon-upload">{{ $t('imagesManage.button.upload') }}</el-button>
+      <el-button type="primary" size="small" icon="el-icon-refresh" :loading="refreshLoading" @click="refresh">
+        {{ $t('imagesManage.button.refresh') }}
+      </el-button>
     </div>
     <el-table
       v-loading="listLoading"
@@ -80,6 +82,7 @@ export default {
         list: []
       },
       listLoading: true,
+      refreshLoading: false,
       generateLoading: false,
       operateLoading: false,
       batchOperateLoading: false,
@@ -137,6 +140,7 @@ export default {
         })
       })
     },
+    // 复制链接
     copyUrl(data) {
       const url = data
       const oInput = document.createElement('input')
@@ -150,6 +154,32 @@ export default {
         type: 'success',
         duration: 3 * 1000,
         showClose: true
+      })
+    },
+    // 同步数据
+    refresh() {
+      this.$confirm(this.$t('imagesManage.message.refreshConfirmMessage'), this.$t('imagesManage.message.refreshConfirmMessageTitle'), {
+        confirmButtonText: this.$t('imagesManage.message.confirm'),
+        cancelButtonText: this.$t('imagesManage.message.cancel'),
+        type: 'warning'
+      }).then(() => {
+        this.refreshLoading = true
+        request({
+          url: '/file/refresh',
+          method: 'post'
+        }).then((response) => {
+          this.refreshLoading = false
+          this.$message({
+            message: response.message,
+            type: 'success',
+            duration: 3 * 1000,
+            showClose: true
+          })
+          // this.fetchData(this.currentPage, this.pageSize)
+        }).catch((e) => {
+          console.log(e)
+          this.refreshLoading = false
+        })
       })
     },
     handleSizeChange(val) {

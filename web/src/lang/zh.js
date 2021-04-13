@@ -185,11 +185,17 @@ export default {
         }
       }
     },
+    button: {
+      upload: '上传',
+      refresh: '刷新'
+    },
     message: {
       operateSuccess: '操作成功！',
       copySuccess: '复制成功！',
       deleteConfirmMessage: '云存储文件也将一并删除，是否确认操作？',
+      refreshConfirmMessage: '是否立即同步云存储文件信息？这可能花费几分钟。',
       deleteConfirmMessageTitle: '提示',
+      refreshConfirmMessageTitle: '提示',
       cancel: '取消',
       confirm: '确定'
     }
