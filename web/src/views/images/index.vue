@@ -30,7 +30,7 @@
       </el-table-column>
       <el-table-column
         align="left"
-        prop="fileName"
+        prop="name"
         :label="$t('imagesManage.imageList.table.filename.columnName')"
         :show-overflow-tooltip="true"
       />
