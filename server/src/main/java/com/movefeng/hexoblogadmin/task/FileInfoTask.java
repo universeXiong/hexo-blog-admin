@@ -16,6 +16,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -75,6 +76,7 @@ public class FileInfoTask {
                 fileInfo.setSize((int) item.fsize);
                 fileInfo.setSuffix(item.mimeType);
                 fileInfo.setUrl(finalUrl);
+                fileInfo.setCreateDate(new Date(item.putTime / 10000));
                 fileInfoList.add(fileInfo);
             }
         }
