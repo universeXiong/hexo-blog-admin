@@ -39,9 +39,6 @@ public class FileInfoTask {
     @Resource
     private FileInfoService fileInfoService;
 
-    public FileInfoTask() {
-    }
-
     // 每天凌晨1点执行一次
     @Scheduled(cron = "0 0 1 * * ?")
     // 每分钟执行一次
