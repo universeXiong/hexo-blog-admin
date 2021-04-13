@@ -81,7 +81,7 @@ pagehelper:
   # 支持方法参数
   support-methods-arguments: true
 qiniu:
-  accessKey:
-  secretKey:
-  domainOfBucket:
+  access-key:
+  secret-key:
+  domain-of-bucket:
   bucket:
